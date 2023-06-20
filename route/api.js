@@ -23,7 +23,7 @@ router.post('/api/notes', (req, res) => {
 // Delete Note
 router.delete('/api/notes/:id', (req, res) => {
     let data = fs.readFileSync('db/db.json', 'utf8');
-    const dataJSON = JSON.pearse(data);
+    const dataJSON = JSON.parse(data);
     const newPosts = dataJSON.filter((note) => {
         return note.id !== req.params.id;
     });
