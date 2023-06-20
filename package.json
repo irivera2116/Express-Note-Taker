@@ -10,5 +10,15 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4"
-  }
+  },
+"devDependencies": {},
+"repository": {
+  "type": "git",
+  "url": "git+https://github.com:irivera2116/Express-Note-Taker.git"
+},
+"keywords": [],
+"bugs": {
+  "url": "https://github.com/irivera2116/Express-Note-Taker/issues"
+},
+"homepage": "https://github.com/irivera2116/Express-Note-Taker#readme"
 }

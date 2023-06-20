@@ -15,6 +15,9 @@ route.post('/api/notes', (req, res) => {
         text: req.body.text,
         id: uuidv4()
     };
+    dbJson.push(newPost);
+    fs.writeFileSync('db/db.json', JSON.stringify(dbJson));
+    res.json(dbJson);
 });
 
 // Delete Note
