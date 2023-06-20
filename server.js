@@ -10,8 +10,9 @@ const app = express();
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(express.static('public'));
-app.use(htmlRoute);
 app.use(apiRoute);
+app.use(htmlRoute);
+
 
 app.listen(PORT, () => {
     console.log(`Running on localhost:${PORT}`);
