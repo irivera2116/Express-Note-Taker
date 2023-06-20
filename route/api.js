@@ -3,7 +3,7 @@ const { v4: uuidv4 } = require('uuid');
 const fs = require('fs');
 
 router.get('/api/notes', async (req, res) => {
-    const dbJson = JSON.parse(fs.readFileSync('db/db.json', 'utf8'));
+    const dbJson = await JSON.parse(fs.readFileSync('db/db.json', 'utf8'));
     res.json(dbJson);
 });
 
@@ -16,7 +16,7 @@ router.post('/api/notes', (req, res) => {
         id: uuidv4(),
     };
     dbJson.push(newPost);
-    writeFileSync('db/db.json', JSON.stringify(dbJson));
+    fs.writeFileSync('db/db.json', JSON.stringify(dbJson));
     res.json(dbJson);
 });
 
